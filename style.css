@@ -1,0 +1,310 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;   
+}
+:root {
+    --bg-light: #F0F8FF;
+    --bg-dark: #D5E8F3;
+    --text-primary: #333333;
+    --text-secondary: #828282;
+    --accent: #38A3A5;
+    --cta: #F9AA33;
+  }
+html{
+    color-scheme: light;   
+}
+body{
+    
+    font-family: Open-sans;
+    text-wrap: pretty;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    color: var(--text-secondary);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+img,picture,svg,video{
+    display: block;
+    max-width: 100%;
+}
+h1{
+    font-size: 40px;
+    text-wrap: balanced;
+}
+h2 {
+    font-size: 32px;
+    text-wrap: balanced;
+}
+h3 {
+    font-size: 28px;
+    text-wrap: balanced;
+}
+h4 {
+    font-size: 24px;
+    text-wrap: balanced;
+}
+h5 {
+    font-size: 20px;
+    text-wrap: balanced;
+}
+h6 {
+    font-size: 16px;
+    text-wrap: balanced;
+}
+a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+ul{
+    list-style: none;
+}
+/*CSS reset above*/
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-light);
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 0.3em;
+}
+.navigation{
+  justify-content: space-between;
+}
+.navigation-links-list{
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+  flex-grow: 1;
+  margin: 0 2.5em;
+}
+li:hover{
+  border-bottom: 2px solid var(--text-secondary);
+}
+.navigation-links-list li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.7rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8em;
+    /* margin: 0 0.5em; */
+    width: 100%;
+    min-height: 90vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.headline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.CTA{
+    background-color: var(--cta);
+    color: var(--bg-light);
+    padding: 0.3em 0.5em;
+}
+
+footer{
+    padding: 0.3em;
+    margin: 0.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* position: sticky;
+    bottom: 0; */
+    width: 100%;
+    background-color: var(--bg-light);
+    margin-bottom: 0;
+}
+.footer-links, .footer-links, li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.7em;
+}
+.footer-trademark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0.2em;
+}
+  
+/* Smartphone Styles (320px - 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    font-size: 14px; /* Smaller base font size for better readability */
+  }
+  h1 {
+    font-size: 1.8em; /* Headings slightly larger relative to body text */
+  }
+  p {
+    font-size: 1.1em; /* Paragraphs slightly larger */
+  }
+  .image {
+    width: 80%; /* Adjust image width for smaller screens */
+  }
+}
+
+/* Tablet Portrait Styles (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Adjust base font size and element sizes as needed for tablets */
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  .image {
+    width: 90%; /* Adjust image width for landscape tablets */
+  }
+}
+
+/* Tablet Landscape Styles (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Adjust base font size and element sizes for landscape tablets */
+  body {
+    font-size: 17px;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+  p {
+    font-size: 1.3em;
+  }
+  .image {
+    width: 70%; /* Adjust image width for desktops */
+  }
+}
+
+/* Desktop Styles (1025px and above) */
+@media (min-width: 1025px) {
+  /* Adjust base font size and element sizes for desktops */
+  body {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.4em;
+  }
+  .image {
+    width: 60%; /* Adjust image width for desktops */
+  }
+}
+
+/* Style your website content here */
+
+#menuButton {
+  position: fixed; /* Keep the button in place */
+  /* top: 20px; /* Adjust button position */
+  /* left: 20px; Adjust button position */
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer; /* Indicate clickable element */
+  display: block; /* Now shows by default */
+}
+
+/* Media query with higher specificity to hide on desktops */
+@media (min-width: 768px) {
+  #menuButton {
+    display: none; /* Now hide for larger screens */
+  }
+
+}
+/* Target #menuButton on mobile screens and adjust position */
+@media (max-width: 767px) {
+  #menuButton {
+    position: relative;
+  }
+  .navigation-links {
+    display: none; /* Hide navigation links on mobile */
+  }
+  .navigation{
+    justify-content: space-between;
+  }
+  .logo{
+    margin: 0 10px;
+  }
+}
+
+.menuLine {
+  width: 25px;
+  height: 2px;
+  background-color: #333; /* Adjust color as needed */
+  display: block;
+  margin: 5px auto; /* Center lines vertically */
+}
+
+#menuContent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Occupy full width on mobile */
+  height: 100vh; /* Occupy full viewport height */
+  background-color: #fff; /* Adjust background color */
+  transform: translateX(-100%); /* Initially hide menu content */
+  transition: transform 0.3s ease-in-out; /* Smooth menu slide animation */
+}
+
+#menuContent.show { /* Style applied when menu is open */
+  transform: translateX(0);
+}
+
+#menuContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menuContent li {
+  margin: 10px 0;
+}
+
+#menuContent a {
+  text-decoration: none;
+  color: #333; /* Adjust text color */
+  display: block;
+  padding: 10px;
+  }
+  
+  #closeButton {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    color: red;
+  }
+ 
+  .my-icon{
+    font-size: 1.2em;
+  }
