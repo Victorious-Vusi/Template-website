@@ -93,8 +93,9 @@ nav{
   flex-grow: 1;
   margin: 0 2.5em;
 }
-li:hover{
-  border-bottom: 2px solid var(--text-secondary);
+
+.navigation-links-list li:hover, .footer-links li:hover{
+  border-bottom: 2px solid var(--accent);
 }
 .navigation-links-list li{
     display: flex;
@@ -296,6 +297,9 @@ footer{
   display: block;
   padding: 10px;
   }
+#menuContent a:hover{
+  border-bottom: 2px solid var(--accent);
+}
   
   #closeButton {
     border: none;
